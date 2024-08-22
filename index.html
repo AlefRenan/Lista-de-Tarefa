@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefa Álef</title>
+    <link rel="shortcut icon" href="./image/Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+     <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  </head>
+  <body>
+    <div class="principal">
+      <h1>Lista de Tarefa Avançado</h1>
+      <form id="tarefa">
+        <hr />
+        <h3>Adicione sua tarefa:</h3>
+        <input type="text" placeholder="O que você vai fazer?" id="task" />
+        <button type="" class="button" id="buttonAdd">
+          <span class="material-symbols-outlined"> add </span>
+        </button>
+        <hr />
+      </form>
+      <div class="hide" id="edit">
+        <hr />
+        <h3>Edite sua Tarefa:</h3>
+        <div>
+          <input type="text" id="inputEdit" />
+          <button class="buttonOk">
+            <span class="material-symbols-outlined"> done_all </span>
+          </button>
+        </div>
+        <button class="buttonCancel">Cancelar</button>
+        <hr />
+      </div>
+      <div class="pesquisa_filtro">
+        <div class="pesquisa">
+          <h3>Pesquisar:</h3>
+          <input type="search" placeholder="Buscar..." onkeyup="filtrar()" id="inputSearch" />
+        </div>
+        <hr class="linha" />
+        <div class="filtrar">
+          <h3>Filtrar:</h3>
+          <select id="select">
+            <option value="all">Todos</option>
+            <option value="done">Feitos</option>
+            <option value="incomplete">A fazer</option>
+          </select>
+        </div>
+      </div>
+      <div class="atividades">
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
