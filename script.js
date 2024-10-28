@@ -195,7 +195,6 @@ document.addEventListener("click", (e) => {
 
 function filter() {
   const selectedStats = select.value;
-  console.log(selectedStats);
 
   for (i = 0; i < atividades.children.length; i++) {
     const divs = atividades.children[i];
@@ -208,5 +207,5 @@ function filter() {
     }
   }
 }
-
 select.addEventListener("change", filter);
+log;
