@@ -35,13 +35,14 @@ buttonAdd.addEventListener("submit", (e) => {
     //Colocando as classes
     div.classList.add("divTask");
     //Colocando o status e o valor do span no objeto itens
-
+    const id = crypto.randomUUID();
+    div.id = id;
     switch (select.value) {
       case "incomplete":
         itens.push({
           valor: span.innerHTML,
           stats: "incomplete",
-          id: crypto.randomUUID(),
+          id,
         });
         //Colocando os elementos no HTML
         div.appendChild(span);
@@ -58,7 +59,7 @@ buttonAdd.addEventListener("submit", (e) => {
         itens.push({
           valor: span.innerHTML,
           stats: "done",
-          id: crypto.randomUUID(),
+          id,
         });
         //Colocando os elementos no HTML
         div.appendChild(span);
@@ -74,7 +75,7 @@ buttonAdd.addEventListener("submit", (e) => {
         itens.push({
           valor: span.innerHTML,
           stats: "incomplete",
-          id: crypto.randomUUID(),
+          id,
         });
         //Colocando os elementos no HTML
         div.appendChild(span);
@@ -128,16 +129,17 @@ function filtrar() {
 
 document.addEventListener("click", (e) => {
   const targetEl = e.target;
-
   if (targetEl.classList.contains("material-symbols-outlined")) {
     const buttonClassDER = targetEl.parentElement;
     switch (true) {
       //Botão Done
       case buttonClassDER.classList.contains("buttonDone"):
         const divTask = buttonClassDER.parentElement;
+        console.log(divTask);
+
         spanValue = buttonClassDER.previousElementSibling.innerText;
         itens.map((item) => {
-          if (item.valor == spanValue) {
+          if (item.id == divTask.id) {
             divTask.classList.toggle("taskComplete");
             if (divTask.classList.contains("taskComplete")) {
               if (select.value == "incomplete") {
