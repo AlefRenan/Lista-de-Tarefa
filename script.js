@@ -208,4 +208,3 @@ function filter() {
   }
 }
 select.addEventListener("change", filter);
-log;
